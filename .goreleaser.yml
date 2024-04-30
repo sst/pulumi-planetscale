@@ -1,0 +1,23 @@
+archives:
+  - id: archive
+    name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
+builds:
+  - binary: pulumi-resource-planetscale
+    dir: provider
+    goarch:
+      - amd64
+      - arm64
+    goos:
+      - darwin
+      - windows
+      - linux
+    ignore: []
+    ldflags:
+      - -X github.com/sst/pulumi-planetscale/provider/pkg/version.Version={{.Tag}}
+    main: ./cmd/pulumi-resource-planetscale/
+    #sort: asc
+    #use: git
+release:
+  disable: false
+snapshot:
+  name_template: "{{ .Tag }}-SNAPSHOT"

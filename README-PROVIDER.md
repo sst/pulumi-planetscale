@@ -1,6 +1,6 @@
-# Foo Resource Provider
+# Planetscale Resource Provider
 
-The Foo Resource Provider lets you manage [Foo](http://example.com) resources.
+The Planetscale Resource Provider lets you manage [Planetscale](http://example.com) resources.
 
 ## Installing
 
@@ -11,21 +11,13 @@ This package is available for several languages/platforms:
 To use from JavaScript or TypeScript in Node.js, install using either `npm`:
 
 ```bash
-npm install @pulumi/foo
+npm install @sst-provider/planetscale
 ```
 
 or `yarn`:
 
 ```bash
-yarn add @pulumi/foo
-```
-
-### Python
-
-To use from Python, install using `pip`:
-
-```bash
-pip install pulumi_foo
+yarn add @sst-provider/planetscale
 ```
 
 ### Go
@@ -33,15 +25,7 @@ pip install pulumi_foo
 To use from Go, use `go get` to grab the latest version of the library:
 
 ```bash
-go get github.com/pulumi/pulumi-foo/sdk/go/...
-```
-
-### .NET
-
-To use from .NET, install using `dotnet add package`:
-
-```bash
-dotnet add package Pulumi.Foo
+go get github.com/sst/pulumi-planetscale/sdk/go/...
 ```
 
 ## Configuration

@@ -1,0 +1,264 @@
+{
+    "auto-aliasing": {
+        "resources": {
+            "planetscale_backup": {
+                "current": "planetscale:index/backup:Backup",
+                "fields": {
+                    "restored_branches": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "planetscale_branch": {
+                "current": "planetscale:index/branch:Branch",
+                "fields": {
+                    "region": {
+                        "fields": {
+                            "public_ip_addresses": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_database": {
+                "current": "planetscale:index/database:Database"
+            },
+            "planetscale_password": {
+                "current": "planetscale:index/password:Password",
+                "fields": {
+                    "region": {
+                        "fields": {
+                            "public_ip_addresses": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "datasources": {
+            "planetscale_backup": {
+                "current": "planetscale:index/getBackup:getBackup",
+                "fields": {
+                    "restored_branches": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "planetscale_backups": {
+                "current": "planetscale:index/getBackups:getBackups",
+                "fields": {
+                    "backups": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "restored_branches": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_branch": {
+                "current": "planetscale:index/getBranch:getBranch",
+                "fields": {
+                    "region": {
+                        "fields": {
+                            "public_ip_addresses": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_branch_schema": {
+                "current": "planetscale:index/getBranchSchema:getBranchSchema",
+                "fields": {
+                    "tables": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "planetscale_branch_schema_lint": {
+                "current": "planetscale:index/getBranchSchemaLint:getBranchSchemaLint",
+                "fields": {
+                    "errors": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "auto_increment_column_names": {
+                                    "maxItemsOne": false
+                                },
+                                "foreign_key_column_names": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_branches": {
+                "current": "planetscale:index/getBranches:getBranches",
+                "fields": {
+                    "branches": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "region": {
+                                    "fields": {
+                                        "public_ip_addresses": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_database": {
+                "current": "planetscale:index/getDatabase:getDatabase",
+                "fields": {
+                    "region": {
+                        "fields": {
+                            "public_ip_addresses": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_database_read_only_regions": {
+                "current": "planetscale:index/getDatabaseReadOnlyRegions:getDatabaseReadOnlyRegions",
+                "fields": {
+                    "regions": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "region": {
+                                    "fields": {
+                                        "public_ip_addresses": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_database_regions": {
+                "current": "planetscale:index/getDatabaseRegions:getDatabaseRegions",
+                "fields": {
+                    "regions": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "public_ip_addresses": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_databases": {
+                "current": "planetscale:index/getDatabases:getDatabases",
+                "fields": {
+                    "databases": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "region": {
+                                    "fields": {
+                                        "public_ip_addresses": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_oauth_applications": {
+                "current": "planetscale:index/getOauthApplications:getOauthApplications",
+                "fields": {
+                    "applications": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "scopes": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_organization": {
+                "current": "planetscale:index/getOrganization:getOrganization"
+            },
+            "planetscale_organization_regions": {
+                "current": "planetscale:index/getOrganizationRegions:getOrganizationRegions",
+                "fields": {
+                    "regions": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "public_ip_addresses": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_organizations": {
+                "current": "planetscale:index/getOrganizations:getOrganizations",
+                "fields": {
+                    "organizations": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "planetscale_password": {
+                "current": "planetscale:index/getPassword:getPassword",
+                "fields": {
+                    "region": {
+                        "fields": {
+                            "public_ip_addresses": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_passwords": {
+                "current": "planetscale:index/getPasswords:getPasswords",
+                "fields": {
+                    "passwords": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "region": {
+                                    "fields": {
+                                        "public_ip_addresses": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "planetscale_user": {
+                "current": "planetscale:index/getUser:getUser"
+            }
+        }
+    },
+    "auto-settings": {}
+}
