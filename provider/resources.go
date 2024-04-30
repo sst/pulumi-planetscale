@@ -149,6 +149,7 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
+			PackageName: "@sst-provider/planetscale",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
