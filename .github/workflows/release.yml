@@ -43,6 +43,8 @@ jobs:
         working-directory: ./provider
         run: go mod download
 
+      - run: make tfgen
+
       - run: make build_nodejs
 
       - uses: goreleaser/goreleaser-action@v5

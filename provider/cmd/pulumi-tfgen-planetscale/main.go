@@ -15,12 +15,11 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
+	"github.com/pulumi/pulumi-terraform-bridge/pf/tfgen"
 	planetscale "github.com/sst/pulumi-planetscale/provider"
-	"github.com/sst/pulumi-planetscale/provider/pkg/version"
 )
 
 func main() {
 	// Modify the path to point to the new provider
-	tfgen.Main("planetscale", version.Version, planetscale.Provider())
+	tfgen.Main("planetscale", planetscale.Provider())
 }

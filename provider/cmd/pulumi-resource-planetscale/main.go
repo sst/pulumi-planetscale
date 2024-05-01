@@ -15,11 +15,11 @@
 package main
 
 import (
+	"context"
 	_ "embed"
 
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	"github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	planetscale "github.com/sst/pulumi-planetscale/provider"
-	"github.com/sst/pulumi-planetscale/provider/pkg/version"
 )
 
 //go:embed schema.json
@@ -27,5 +27,6 @@ var pulumiSchema []byte
 
 func main() {
 	// Modify the path to point to the new provider
-	tfbridge.Main("planetscale", version.Version, planetscale.Provider(), pulumiSchema)
+	tfbridge.Main(context.Background(), "planetscale", planetscale.Provider(),
+		tfbridge.ProviderMetadata{PackageSchema: pulumiSchema})
 }
